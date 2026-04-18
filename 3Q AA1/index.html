@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up - EqualEd</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+
+  <header>
+    <h1>EqualEd: Education Unlocked</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="challenges.html">Education Challenges</a>
+      <a href="help.html">How You Can Help</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Create an Account</h2>
+
+    <form onsubmit="return validateForm()">
+
+      <h3>Personal Information</h3>
+
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name"
+        onfocus="this.style.borderColor='#2e7d32'"
+        onblur="this.style.borderColor='#ccc'" />
+      <span class="error" id="nameErr"></span>
+
+      <label>Birthdate</label>
+      <input type="date" id="bday" />
+      <span class="error" id="bdayErr"></span>
+
+      <label>Sex</label>
+      <label><input type="radio" name="sex" value="male" /> Male</label>
+      <label><input type="radio" name="sex" value="female" /> Female</label>
+      <label><input type="radio" name="sex" value="other" /> Prefer not to say</label>
+      <span class="error" id="sexErr"></span>
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="you@example.com"
+        onfocus="this.style.borderColor='#2e7d32'"
+        onblur="this.style.borderColor='#ccc'" />
+      <span class="error" id="emailErr"></span>
+
+      <h3>Account Details</h3>
+
+      <label>Username</label>
+      <input type="text" id="user" placeholder="8-20 characters, letters and numbers only"
+        onfocus="this.style.borderColor='#2e7d32'"
+        onblur="this.style.borderColor='#ccc'" />
+      <span class="error" id="userErr"></span>
+
+      <label>Password</label>
+      <input type="password" id="pass" placeholder="At least 10 characters"
+        onfocus="this.style.borderColor='#2e7d32'"
+        onblur="this.style.borderColor='#ccc'" />
+      <span class="error" id="passErr"></span>
+
+      <label>Confirm Password</label>
+      <input type="password" id="pass2" placeholder="Re-enter your password"
+        onfocus="this.style.borderColor='#2e7d32'"
+        onblur="this.style.borderColor='#ccc'" />
+      <span class="error" id="pass2Err"></span>
+
+      <h3>About Your Interest in Education</h3>
+
+      <label>Which education area interests you most?</label>
+      <select id="area">
+        <option value="">-- choose --</option>
+        <option value="literacy">Literacy and Reading</option>
+        <option value="stem">STEM Education</option>
+        <option value="vocational">Vocational Training</option>
+        <option value="digital">Digital Literacy</option>
+      </select>
+      <span class="error" id="areaErr"></span>
+
+      <label>How would you like to help?</label>
+      <label><input type="checkbox" name="help" value="volunteer" /> Volunteer as a tutor</label>
+      <label><input type="checkbox" name="help" value="donate" /> Donate learning materials</label>
+      <label><input type="checkbox" name="help" value="awareness" /> Spread awareness</label>
+      <label><input type="checkbox" name="help" value="fundraise" /> Help fundraise</label>
+      <span class="error" id="helpErr"></span>
+
+      <label>How often do you engage with education causes?</label>
+      <label><input type="radio" name="freq" value="daily" /> Daily</label>
+      <label><input type="radio" name="freq" value="weekly" /> Weekly</label>
+      <label><input type="radio" name="freq" value="monthly" /> Monthly</label>
+      <label><input type="radio" name="freq" value="rarely" /> Rarely</label>
+      <span class="error" id="freqErr"></span>
+
+      <button type="submit">Join Us and Unlock Education!</button>
+
+      <p id="success"></p>
+
+      <p><a href="index.html">Back to Homepage</a></p>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 EqualEd: Education Unlocked. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
